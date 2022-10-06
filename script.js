@@ -17,9 +17,9 @@ let calcfunction = (number) => {
 }
 
 let clr = () => {
-    prevEl.innerHTML = "";
-    currEl.innerHTML = "";
-    equation = output = '';
+    prevEl.innerHTML = " ";
+    currEl.innerHTML = " ";
+    equation = output = ' ';
 }
 
 let del = () => {
