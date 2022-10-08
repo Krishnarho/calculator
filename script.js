@@ -1,12 +1,12 @@
 const   prevEl = document.querySelector('.prev-equation'),
         currEl = document.querySelector('.curr-equation');
 
-let equation=output=''; 
+let equation=output=prev=''; 
 
 let calcfunction = (number) => {
     if(output!=''){
         if(number==='/'||number==='*'||number==='+'||number==='-'){
-             equation = output;
+             equation = prev;
              output='';
         }else{
             clr();
@@ -17,9 +17,9 @@ let calcfunction = (number) => {
 }
 
 let clr = () => {
-    prevEl.innerHTML = " ";
-    currEl.innerHTML = " ";
-    equation = output = ' ';
+    prevEl.innerHTML = "";
+    currEl.innerHTML = "";
+    equation = output = '';
 }
 
 let del = () => {
@@ -29,8 +29,8 @@ let del = () => {
 
 let result = () =>{
     try{
-        
-        prevEl.innerHTML = equation.replace("/","÷")+'=';
+        prev = equation.replace("/","÷");
+        prevEl.innerHTML = prev+'=';
         output = eval(equation);
         currEl.innerHTML = output;
     }
