@@ -6,7 +6,7 @@ let equation=output=prev='';
 let calcfunction = (number) => {
     if(output!=''){
         if(number==='/'||number==='*'||number==='+'||number==='-'){
-             equation = prev;
+             equation = output;
              output='';
         }else{
             clr();
