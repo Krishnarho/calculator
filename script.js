@@ -4,7 +4,7 @@ const   prevEl = document.querySelector('.prev-equation'),
 let equation=output=prev=''; 
 
 let calcfunction = (number) => {
-    if(output!=''){
+    if(output!='' || output === 0){
         if(number==='/'||number==='*'||number==='+'||number==='-'){
              equation = output;
              output='';
@@ -12,6 +12,7 @@ let calcfunction = (number) => {
             clr();
         }
     }
+   // if(output === 0){clr();}
     equation += number;    
     currEl.innerHTML = equation.replace("/","÷");
 }
