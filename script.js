@@ -4,15 +4,14 @@ const   prevEl = document.querySelector('.prev-equation'),
 let equation=output=prev=''; 
 
 let calcfunction = (number) => {
-    if(output!='' || output === 0){
+    if(output!==''){
         if(number==='/'||number==='*'||number==='+'||number==='-'){
              equation = output;
              output='';
         }else{
             clr();
         }
-    }
-   // if(output === 0){clr();}
+    }   
     equation += number;    
     currEl.innerHTML = equation.replace("/","÷");
 }
@@ -37,6 +36,6 @@ let result = () =>{
     }
     catch(e){
         prevEl.innerHTML = equation.replace("/","÷");
-        currEl.innerHTML = 'Incorrect equation';        
+        currEl.innerHTML = e.message;  
     }
 }
