@@ -4,7 +4,7 @@ const   prevEl = document.querySelector('.prev-equation'),
 let equation=output=prev=''; 
 
 let calcfunction = (number) => {
--    if(output!==''){
+   if(output!==''){
         if(number==='/'||number==='*'||number==='+'||number==='-'){
              equation = output;
              output='';
